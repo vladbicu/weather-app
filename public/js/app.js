@@ -1,5 +1,3 @@
-console.log("Client side javascript file is loaded!");
-
 const weatherForm = document.querySelector("form");
 const search = document.querySelector("#address");
 const messageOne = document.querySelector("#error");
@@ -17,7 +15,6 @@ weatherForm.addEventListener("submit", e => {
     .then(resp => resp.json())
     .then(data => {
       if (data.error) {
-        console.log(data.error);
         messageOne.textContent = data.error;
       } else {
         messageOne.textContent = data.location;
